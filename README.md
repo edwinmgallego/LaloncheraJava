@@ -17,25 +17,6 @@ Este proyecto integra los siguientes pilares de la programación en Java:
 ## 📂 Estructura del Proyecto
 
 El código fuente está organizado en los siguientes paquetes dentro de NetBeans:
-
-```text
-src/
-└── com/lonchera/
-    ├── main/
-    │   └── Main.java                # Punto de entrada de la aplicación
-    ├── modelo/
-    │   ├── IEmpacable.java          # Interfaz
-    │   ├── Producto.java            # Clase abstracta base
-    │   ├── Hamburguesa.java         # Clase concreta
-    │   ├── Bebida.java              # Clase concreta
-    │   ├── Pedido.java              # Gestor de la Colección de productos
-    │   └── ArchivoServicio.java     # Lógica de persistencia (I/O)
-    ├── vista/
-    │   └── VistaCaja.java           # Interfaz simulada por consola
-    └── controlador/
-        └── CajaController.java      # Orquestador entre el Modelo y la Vista
-
-
 ## 🧩 Explicación Paso a Paso del Código (Diccionario de Clases)
 
 A continuación, se detalla la responsabilidad de cada componente dentro de la arquitectura MVC para comprender el flujo de los datos y la lógica del sistema.
@@ -100,3 +81,22 @@ Es el cerebro de las operaciones. Comunica la Vista con el Modelo.
 * **`Main`**
     * **Propósito:** Es donde arranca el programa.
     * **`main(String[] args)`:** El método de ejecución principal de Java. Aquí se instancian las tres partes del MVC (Modelo, Vista, Controlador), se "conectan" pasándolas por parámetro al constructor del controlador, y se da la orden de `controlador.iniciarCaja()` para encender el sistema.
+
+```text
+src/
+└── com/lonchera/
+    ├── main/
+    │   └── Main.java                # Punto de entrada de la aplicación
+    ├── modelo/
+    │   ├── IEmpacable.java          # Interfaz
+    │   ├── Producto.java            # Clase abstracta base
+    │   ├── Hamburguesa.java         # Clase concreta
+    │   ├── Bebida.java              # Clase concreta
+    │   ├── Pedido.java              # Gestor de la Colección de productos
+    │   └── ArchivoServicio.java     # Lógica de persistencia (I/O)
+    ├── vista/
+    │   └── VistaCaja.java           # Interfaz simulada por consola
+    └── controlador/
+        └── CajaController.java      # Orquestador entre el Modelo y la Vista
+
+
